@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Watering Calculator - Leafwise</title>
+  <meta name="description" content="Free interactive tool: pick your plant, pot size, light level, and season to get a personalized watering schedule.">
+  <link rel="canonical" href="https://your-domain-here.com/calculator.html">
+  <meta property="og:title" content="Plant Watering Calculator - Leafwise">
+  <meta property="og:description" content="Free interactive tool: pick your plant, pot size, light level, and season to get a personalized watering schedule.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='17' fill='%232f6b46'/%3E%3Cpath d='M9 23C9 14.5 15.5 9 24.5 9C24.5 17.5 18.5 23 11 23H9Z' fill='white' fill-opacity='.95'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand"><svg width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="17" cy="17" r="17" fill="url(#lwgrad)"/>
+      <path d="M9 23C9 14.5 15.5 9 24.5 9C24.5 17.5 18.5 23 11 23H9Z" fill="#fff" fill-opacity="0.95"/>
+      <path d="M9.5 23C9.5 23 12.5 16.5 18 13" stroke="#1b3a2b" stroke-width="1.3" stroke-linecap="round"/>
+      <defs><linearGradient id="lwgrad" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6bb583"/><stop offset="1" stop-color="#1b3a2b"/>
+      </linearGradient></defs>
+    </svg><span>Leafwise</span></a>
+      <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="calculator.html" class="active">Watering Calculator</a>
+      <a href="about.html">About</a>
+      
+      <a href="calculator.html" class="nav-cta">Try the Calculator</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+  <div class="wrap">
+    <div class="section-heading center">
+      <span class="eyebrow">🧮 Free tool</span>
+      <h1>Watering Calculator</h1>
+      <p class="hero-sub">Answer a few quick questions and get a personalized watering interval for your plant.</p>
+    </div>
+
+    <div class="calculator-card">
+      <label for="plant-select"><span class="step-num">1</span> Which plant do you have?</label>
+      <select id="plant-select">
+        <option value="pothos">Pothos</option>
+<option value="snake-plant">Snake Plant</option>
+<option value="monstera-deliciosa">Monstera Deliciosa</option>
+<option value="peace-lily">Peace Lily</option>
+<option value="spider-plant">Spider Plant</option>
+<option value="zz-plant">ZZ Plant</option>
+<option value="fiddle-leaf-fig">Fiddle Leaf Fig</option>
+<option value="aloe-vera">Aloe Vera</option>
+<option value="philodendron-heartleaf">Philodendron (Heartleaf)</option>
+<option value="string-of-pearls">String of Pearls</option>
+<option value="orchid-phalaenopsis">Orchid (Phalaenopsis)</option>
+<option value="rubber-plant">Rubber Plant</option>
+<option value="boston-fern">Boston Fern</option>
+<option value="calathea">Calathea</option>
+<option value="jade-plant">Jade Plant</option>
+      </select>
+
+      <label for="light-select"><span class="step-num">2</span> How much light does it get?</label>
+      <select id="light-select">
+        <option value="low">Low light (far from windows)</option>
+        <option value="medium" selected>Medium / indirect light</option>
+        <option value="bright">Bright light (near a sunny window)</option>
+      </select>
+
+      <label for="pot-select"><span class="step-num">3</span> What size is the pot?</label>
+      <select id="pot-select">
+        <option value="small">Small (under 15 cm / 6 in)</option>
+        <option value="medium" selected>Medium (15-25 cm / 6-10 in)</option>
+        <option value="large">Large (over 25 cm / 10 in)</option>
+      </select>
+
+      <label for="season-select"><span class="step-num">4</span> What season is it?</label>
+      <select id="season-select">
+        <option value="summer" selected>Spring / Summer (active growth)</option>
+        <option value="winter">Fall / Winter (slower growth)</option>
+      </select>
+
+      <button id="calc-btn" class="btn-primary">Calculate My Watering Schedule</button>
+
+      <div id="calc-result" class="calc-result" style="display:none;"></div>
+    </div>
+
+    <div class="ad-slot">
+      <span class="ad-label">Advertisement</span>
+      <!-- Paste your AdSense <ins> unit here once your account is approved -->
+    </div>
+
+    <p class="muted small">This calculator gives a general estimate. Always check the soil with your finger before watering - conditions like room temperature, air flow, and pot material also affect how fast soil dries out.</p>
+  </div>
+  </main>
+  <div class="wave-divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,32 C240,64 480,0 720,16 C960,32 1200,64 1440,32 L1440,60 L0,60 Z" fill="#123024"></path>
+  </svg></div>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="brand brand-light"><svg width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="17" cy="17" r="17" fill="url(#lwgrad)"/>
+      <path d="M9 23C9 14.5 15.5 9 24.5 9C24.5 17.5 18.5 23 11 23H9Z" fill="#fff" fill-opacity="0.95"/>
+      <path d="M9.5 23C9.5 23 12.5 16.5 18 13" stroke="#1b3a2b" stroke-width="1.3" stroke-linecap="round"/>
+      <defs><linearGradient id="lwgrad" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6bb583"/><stop offset="1" stop-color="#1b3a2b"/>
+      </linearGradient></defs>
+    </svg><span>Leafwise</span></a>
+        <p class="muted-light">Know exactly when to water every plant you own.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-heading">Site</span>
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Watering Calculator</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <span class="footer-heading">Legal</span>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      </div>
+    </div>
+    <p class="muted-light center small footer-bottom">© 2026 Leafwise. Plant care information is general guidance, not a substitute for observing your own plant's conditions.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
