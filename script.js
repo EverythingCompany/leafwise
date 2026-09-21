@@ -74,6 +74,56 @@ const PLANT_DATA = {
     "base_summer": 14,
     "base_winter": 30,
     "name": "Jade Plant"
+  },
+  "chinese-money-plant": {
+    "base_summer": 8,
+    "base_winter": 16,
+    "name": "Chinese Money Plant"
+  },
+  "english-ivy": {
+    "base_summer": 7,
+    "base_winter": 14,
+    "name": "English Ivy"
+  },
+  "dracaena-marginata": {
+    "base_summer": 12,
+    "base_winter": 24,
+    "name": "Dracaena Marginata"
+  },
+  "chinese-evergreen": {
+    "base_summer": 8,
+    "base_winter": 16,
+    "name": "Chinese Evergreen"
+  },
+  "parlor-palm": {
+    "base_summer": 8,
+    "base_winter": 16,
+    "name": "Parlor Palm"
+  },
+  "croton": {
+    "base_summer": 6,
+    "base_winter": 12,
+    "name": "Croton"
+  },
+  "african-violet": {
+    "base_summer": 6,
+    "base_winter": 10,
+    "name": "African Violet"
+  },
+  "christmas-cactus": {
+    "base_summer": 8,
+    "base_winter": 13,
+    "name": "Christmas Cactus"
+  },
+  "money-tree": {
+    "base_summer": 8,
+    "base_winter": 17,
+    "name": "Money Tree"
+  },
+  "bird-of-paradise": {
+    "base_summer": 6,
+    "base_winter": 12,
+    "name": "Bird of Paradise"
   }
 };
 
@@ -106,3 +156,41 @@ function initCalculator() {
 }
 
 document.addEventListener('DOMContentLoaded', initCalculator);
+
+// Cookie consent banner (GDPR) - wired to Google's Consent Mode
+(function() {
+  function setConsent(granted) {
+    if (typeof gtag !== 'function') return;
+    var state = granted ? 'granted' : 'denied';
+    gtag('consent', 'update', {
+      'ad_storage': state,
+      'ad_user_data': state,
+      'ad_personalization': state,
+      'analytics_storage': state
+    });
+  }
+  function initCookieBanner() {
+    var banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+    var choice;
+    try { choice = localStorage.getItem('lw_cookie_consent'); } catch (e) { choice = null; }
+    if (!choice) {
+      banner.hidden = false;
+    } else if (choice === 'accepted') {
+      setConsent(true);
+    }
+    var acceptBtn = document.getElementById('cookie-accept');
+    var declineBtn = document.getElementById('cookie-decline');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() {
+      try { localStorage.setItem('lw_cookie_consent', 'accepted'); } catch (e) {}
+      setConsent(true);
+      banner.hidden = true;
+    });
+    if (declineBtn) declineBtn.addEventListener('click', function() {
+      try { localStorage.setItem('lw_cookie_consent', 'declined'); } catch (e) {}
+      setConsent(false);
+      banner.hidden = true;
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initCookieBanner);
+})();
