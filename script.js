@@ -249,6 +249,271 @@ const PLANT_DATA = {
     "base_summer": "8",
     "base_winter": "16",
     "name": "Lucky Bamboo"
+  },
+  "asparagus-fern": {
+    "base_summer": "5",
+    "base_winter": "10",
+    "name": "Asparagus Fern"
+  },
+  "maidenhair-fern": {
+    "base_summer": "2.5",
+    "base_winter": "5",
+    "name": "Maidenhair Fern"
+  },
+  "staghorn-fern": {
+    "base_summer": "8",
+    "base_winter": "16",
+    "name": "Staghorn Fern"
+  },
+  "bird-nest-fern": {
+    "base_summer": "6",
+    "base_winter": "12",
+    "name": "Bird's Nest Fern"
+  },
+  "rabbit-foot-fern": {
+    "base_summer": "5",
+    "base_winter": "9",
+    "name": "Rabbit's Foot Fern"
+  },
+  "philodendron-xanadu": {
+    "base_summer": "7",
+    "base_winter": "13",
+    "name": "Philodendron Xanadu"
+  },
+  "tradescantia-zebrina": {
+    "base_summer": "6",
+    "base_winter": "11",
+    "name": "Tradescantia Zebrina (Wandering Dude)"
+  },
+  "purple-heart-plant": {
+    "base_summer": "6",
+    "base_winter": "12",
+    "name": "Purple Heart Plant"
+  },
+  "arrowhead-plant": {
+    "base_summer": "7",
+    "base_winter": "12",
+    "name": "Arrowhead Plant"
+  },
+  "ficus-audrey": {
+    "base_summer": "7",
+    "base_winter": "14",
+    "name": "Ficus Audrey"
+  },
+  "corn-plant": {
+    "base_summer": "9",
+    "base_winter": "18",
+    "name": "Corn Plant"
+  },
+  "song-of-india": {
+    "base_summer": "8",
+    "base_winter": "16",
+    "name": "Song of India"
+  },
+  "satin-pothos": {
+    "base_summer": "8",
+    "base_winter": "15",
+    "name": "Satin Pothos"
+  },
+  "caladium": {
+    "base_summer": "5",
+    "base_winter": "30",
+    "name": "Caladium"
+  },
+  "polka-dot-plant": {
+    "base_summer": "4.5",
+    "base_winter": "8",
+    "name": "Polka Dot Plant"
+  },
+  "string-of-turtles": {
+    "base_summer": "10",
+    "base_winter": "20",
+    "name": "String of Turtles"
+  },
+  "string-of-dolphins": {
+    "base_summer": "10",
+    "base_winter": "20",
+    "name": "String of Dolphins"
+  },
+  "panda-plant": {
+    "base_summer": "12",
+    "base_winter": "24",
+    "name": "Panda Plant"
+  },
+  "flaming-katy": {
+    "base_summer": "10",
+    "base_winter": "18",
+    "name": "Flaming Katy"
+  },
+  "aeonium": {
+    "base_summer": "10",
+    "base_winter": "14",
+    "name": "Aeonium"
+  },
+  "crown-of-thorns": {
+    "base_summer": "10",
+    "base_winter": "18",
+    "name": "Crown of Thorns"
+  },
+  "yucca-cane": {
+    "base_summer": "12",
+    "base_winter": "24",
+    "name": "Yucca Cane"
+  },
+  "sago-palm": {
+    "base_summer": "9",
+    "base_winter": "18",
+    "name": "Sago Palm"
+  },
+  "majesty-palm": {
+    "base_summer": "5",
+    "base_winter": "9",
+    "name": "Majesty Palm"
+  },
+  "lady-palm": {
+    "base_summer": "8",
+    "base_winter": "16",
+    "name": "Lady Palm"
+  },
+  "fishtail-palm": {
+    "base_summer": "6",
+    "base_winter": "11",
+    "name": "Fishtail Palm"
+  },
+  "cat-palm": {
+    "base_summer": "5",
+    "base_winter": "9",
+    "name": "Cat Palm"
+  },
+  "stromanthe-triostar": {
+    "base_summer": "5",
+    "base_winter": "9",
+    "name": "Stromanthe Triostar"
+  },
+  "ctenanthe": {
+    "base_summer": "6",
+    "base_winter": "11",
+    "name": "Ctenanthe (Never-Never Plant)"
+  },
+  "jasmine-plant": {
+    "base_summer": "5",
+    "base_winter": "10",
+    "name": "Jasmine (Pink Jasmine)"
+  },
+  "hibiscus": {
+    "base_summer": "4",
+    "base_winter": "8",
+    "name": "Hibiscus"
+  },
+  "geranium": {
+    "base_summer": "6",
+    "base_winter": "12",
+    "name": "Geranium"
+  },
+  "cyclamen": {
+    "base_summer": "21",
+    "base_winter": "5",
+    "name": "Cyclamen"
+  },
+  "amaryllis": {
+    "base_summer": "7",
+    "base_winter": "45",
+    "name": "Amaryllis"
+  },
+  "venus-flytrap": {
+    "base_summer": "2",
+    "base_winter": "6",
+    "name": "Venus Flytrap"
+  },
+  "pitcher-plant": {
+    "base_summer": "2.5",
+    "base_winter": "5",
+    "name": "Pitcher Plant"
+  },
+  "ficus-bonsai": {
+    "base_summer": "5",
+    "base_winter": "9",
+    "name": "Ficus Bonsai"
+  },
+  "meyer-lemon-tree": {
+    "base_summer": "4",
+    "base_winter": "8",
+    "name": "Meyer Lemon Tree"
+  },
+  "avocado-plant": {
+    "base_summer": "5",
+    "base_winter": "9",
+    "name": "Avocado Plant"
+  },
+  "elephant-ear-colocasia": {
+    "base_summer": "4",
+    "base_winter": "30",
+    "name": "Elephant Ear"
+  },
+  "travelers-palm": {
+    "base_summer": "6",
+    "base_winter": "11",
+    "name": "Traveler's Palm"
+  },
+  "ti-plant": {
+    "base_summer": "6",
+    "base_winter": "12",
+    "name": "Ti Plant"
+  },
+  "shamrock-plant": {
+    "base_summer": "6",
+    "base_winter": "21",
+    "name": "Shamrock Plant"
+  },
+  "african-milk-tree": {
+    "base_summer": "12",
+    "base_winter": "24",
+    "name": "African Milk Tree"
+  },
+  "button-fern": {
+    "base_summer": "6",
+    "base_winter": "10",
+    "name": "Button Fern"
+  },
+  "swedish-ivy": {
+    "base_summer": "6",
+    "base_winter": "11",
+    "name": "Swedish Ivy"
+  },
+  "babys-tears": {
+    "base_summer": "2.5",
+    "base_winter": "6",
+    "name": "Baby's Tears"
+  },
+  "bunny-ears-cactus": {
+    "base_summer": "14",
+    "base_winter": "30",
+    "name": "Bunny Ears Cactus"
+  },
+  "barrel-cactus": {
+    "base_summer": "16",
+    "base_winter": "35",
+    "name": "Golden Barrel Cactus"
+  },
+  "easter-cactus": {
+    "base_summer": "7",
+    "base_winter": "14",
+    "name": "Easter Cactus"
+  },
+  "friendship-plant": {
+    "base_summer": "6",
+    "base_winter": "10",
+    "name": "Friendship Plant"
+  },
+  "zebra-plant": {
+    "base_summer": "5",
+    "base_winter": "9",
+    "name": "Zebra Plant"
+  },
+  "cape-primrose": {
+    "base_summer": "6",
+    "base_winter": "11",
+    "name": "Cape Primrose"
   }
 };
 
