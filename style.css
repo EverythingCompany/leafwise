@@ -235,3 +235,48 @@ main { min-height: 60vh; }
   .cookie-banner-inner { flex-direction: column; align-items: stretch; text-align: center; }
   .cookie-banner-actions { justify-content: center; }
 }
+
+/* ---------- Category & pet-safety badges ---------- */
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 20px; }
+.cat-badge {
+  display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em;
+  padding: 5px 11px; border-radius: 999px; background: var(--green-100); color: var(--green-800);
+  border: 1px solid var(--green-300);
+}
+.plant-card .cat-badge { margin-top: 2px; align-self: flex-start; }
+.cat-badge-succulent-cactus { background: #fdf1e0; color: #8a5a1f; border-color: #f2b880; }
+.cat-badge-tropical-foliage { background: var(--green-100); color: var(--green-800); border-color: var(--green-300); }
+.cat-badge-vine-trailing { background: #e9f5ea; color: #2f6b46; border-color: #9ed4b3; }
+.cat-badge-palm { background: #fef3e7; color: #a1631f; border-color: #f2b880; }
+.cat-badge-fern { background: #eaf6ef; color: #1b3a2b; border-color: #9ed4b3; }
+.cat-badge-flowering { background: #fdeef0; color: #c85c42; border-color: #e0765a; }
+.cat-badge-air-plant { background: #eef4fb; color: #2f5a8c; border-color: #a9c8e8; }
+
+.pet-badge {
+  display: inline-block; font-size: 0.82rem; font-weight: 600; padding: 5px 12px;
+  border-radius: 999px; border: 1px solid var(--border);
+}
+.pet-badge-safe { background: #e9f5ea; color: #2f6b46; border-color: #9ed4b3; }
+.pet-badge-mild { background: #fdf1e0; color: #8a5a1f; border-color: #f2b880; }
+.pet-badge-toxic { background: #fdeaea; color: #a3352a; border-color: #e8a99e; }
+
+/* ---------- Plant grid filters ---------- */
+.filter-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 14px; margin: 20px 0 6px;
+}
+.filter-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-btn {
+  background: var(--paper); border: 1px solid var(--border); color: var(--text);
+  font-size: 0.85rem; font-weight: 600; padding: 8px 16px; border-radius: 999px;
+  cursor: pointer; transition: background .15s, color .15s, border-color .15s;
+}
+.filter-btn:hover { border-color: var(--green-500); }
+.filter-btn.active { background: var(--green-800); color: #fff; border-color: var(--green-800); }
+.pet-toggle {
+  display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600;
+  color: var(--green-800); cursor: pointer; white-space: nowrap;
+}
+.pet-toggle input { width: 16px; height: 16px; accent-color: var(--green-700); cursor: pointer; }
+#filter-count { margin: 10px 0 0; }
+#no-results { text-align: center; padding: 30px 0; }

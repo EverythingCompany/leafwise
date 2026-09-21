@@ -62,10 +62,10 @@
       <div class="hero-copy">
         <span class="eyebrow">🌿 100% free &middot; no sign-up</span>
         <h1>Stop guessing when to water your plants.</h1>
-        <p class="hero-sub">Know exactly when to water every plant you own. Guides for 25 common houseplants, plus a free calculator that adjusts for your light, pot size, and the season.</p>
+        <p class="hero-sub">Know exactly when to water every plant you own. Guides for 50 common houseplants, plus a free calculator that adjusts for your light, pot size, and the season.</p>
         <a class="btn-primary" href="calculator.html">Try the Free Watering Calculator →</a>
         <div class="hero-badges">
-          <span class="badge">🌱 25 plant guides</span>
+          <span class="badge">🌱 50 plant guides</span>
           <span class="badge">🧮 Instant calculator</span>
           <span class="badge">📵 No app to install</span>
         </div>
@@ -94,134 +94,320 @@
         <h2>Browse Plant Watering Guides</h2>
         <p class="muted">Pick your plant to see exact watering intervals, warning signs, and care tips.</p>
       </div>
-      <div class="plant-grid">
-        <a class="plant-card" href="plants/pothos.html">
+      <div class="filter-bar">
+        <div class="filter-group" id="category-filters">
+          <button type="button" class="filter-btn active" data-filter-category="all">All</button><button type="button" class="filter-btn" data-filter-category="Succulent & Cactus">Succulent & Cactus</button><button type="button" class="filter-btn" data-filter-category="Tropical Foliage">Tropical Foliage</button><button type="button" class="filter-btn" data-filter-category="Vine & Trailing">Vine & Trailing</button><button type="button" class="filter-btn" data-filter-category="Palm">Palm</button><button type="button" class="filter-btn" data-filter-category="Fern">Fern</button><button type="button" class="filter-btn" data-filter-category="Flowering">Flowering</button><button type="button" class="filter-btn" data-filter-category="Air Plant">Air Plant</button>
+        </div>
+        <label class="pet-toggle">
+          <input type="checkbox" id="pet-safe-toggle">
+          <span>🐾 Pet-safe only</span>
+        </label>
+      </div>
+      <p class="muted small" id="filter-count"></p>
+      <div class="plant-grid" id="plant-grid">
+        <a class="plant-card" href="plants/pothos.html" data-category="Vine & Trailing" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Pothos</span>
         <span class="plant-card-freq">Every 7-9 days (summer)</span>
+        <span class="cat-badge cat-badge-vine-trailing">Vine & Trailing</span>
       </a>
-      <a class="plant-card" href="plants/snake-plant.html">
+      <a class="plant-card" href="plants/snake-plant.html" data-category="Succulent & Cactus" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Snake Plant</span>
         <span class="plant-card-freq">Every 14-21 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
       </a>
-      <a class="plant-card" href="plants/monstera-deliciosa.html">
+      <a class="plant-card" href="plants/monstera-deliciosa.html" data-category="Tropical Foliage" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Monstera Deliciosa</span>
         <span class="plant-card-freq">Every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/peace-lily.html">
+      <a class="plant-card" href="plants/peace-lily.html" data-category="Flowering" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Peace Lily</span>
         <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-flowering">Flowering</span>
       </a>
-      <a class="plant-card" href="plants/spider-plant.html">
+      <a class="plant-card" href="plants/spider-plant.html" data-category="Tropical Foliage" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Spider Plant</span>
         <span class="plant-card-freq">Every 6-8 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/zz-plant.html">
+      <a class="plant-card" href="plants/zz-plant.html" data-category="Succulent & Cactus" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">ZZ Plant</span>
         <span class="plant-card-freq">Every 14-18 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
       </a>
-      <a class="plant-card" href="plants/fiddle-leaf-fig.html">
+      <a class="plant-card" href="plants/fiddle-leaf-fig.html" data-category="Tropical Foliage" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Fiddle Leaf Fig</span>
         <span class="plant-card-freq">Every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/aloe-vera.html">
+      <a class="plant-card" href="plants/aloe-vera.html" data-category="Succulent & Cactus" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Aloe Vera</span>
         <span class="plant-card-freq">Every 14-18 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
       </a>
-      <a class="plant-card" href="plants/philodendron-heartleaf.html">
+      <a class="plant-card" href="plants/philodendron-heartleaf.html" data-category="Vine & Trailing" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Philodendron (Heartleaf)</span>
         <span class="plant-card-freq">Every 7-9 days (summer)</span>
+        <span class="cat-badge cat-badge-vine-trailing">Vine & Trailing</span>
       </a>
-      <a class="plant-card" href="plants/string-of-pearls.html">
+      <a class="plant-card" href="plants/string-of-pearls.html" data-category="Succulent & Cactus" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">String of Pearls</span>
         <span class="plant-card-freq">Every 12-16 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
       </a>
-      <a class="plant-card" href="plants/orchid-phalaenopsis.html">
+      <a class="plant-card" href="plants/orchid-phalaenopsis.html" data-category="Flowering" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Orchid (Phalaenopsis)</span>
         <span class="plant-card-freq">Every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-flowering">Flowering</span>
       </a>
-      <a class="plant-card" href="plants/rubber-plant.html">
+      <a class="plant-card" href="plants/rubber-plant.html" data-category="Tropical Foliage" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Rubber Plant</span>
         <span class="plant-card-freq">Every 9-12 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/boston-fern.html">
+      <a class="plant-card" href="plants/boston-fern.html" data-category="Fern" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Boston Fern</span>
         <span class="plant-card-freq">Every 3-5 days (summer)</span>
+        <span class="cat-badge cat-badge-fern">Fern</span>
       </a>
-      <a class="plant-card" href="plants/calathea.html">
+      <a class="plant-card" href="plants/calathea.html" data-category="Tropical Foliage" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Calathea</span>
         <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/jade-plant.html">
+      <a class="plant-card" href="plants/jade-plant.html" data-category="Succulent & Cactus" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Jade Plant</span>
         <span class="plant-card-freq">Every 12-16 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
       </a>
-      <a class="plant-card" href="plants/chinese-money-plant.html">
+      <a class="plant-card" href="plants/chinese-money-plant.html" data-category="Tropical Foliage" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Chinese Money Plant</span>
         <span class="plant-card-freq">Every 7-9 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/english-ivy.html">
+      <a class="plant-card" href="plants/english-ivy.html" data-category="Vine & Trailing" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">English Ivy</span>
         <span class="plant-card-freq">Every 6-8 days (summer)</span>
+        <span class="cat-badge cat-badge-vine-trailing">Vine & Trailing</span>
       </a>
-      <a class="plant-card" href="plants/dracaena-marginata.html">
+      <a class="plant-card" href="plants/dracaena-marginata.html" data-category="Tropical Foliage" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Dracaena Marginata</span>
         <span class="plant-card-freq">Every 10-14 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/chinese-evergreen.html">
+      <a class="plant-card" href="plants/chinese-evergreen.html" data-category="Tropical Foliage" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Chinese Evergreen</span>
         <span class="plant-card-freq">Every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/parlor-palm.html">
+      <a class="plant-card" href="plants/parlor-palm.html" data-category="Palm" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Parlor Palm</span>
         <span class="plant-card-freq">Every 7-9 days (summer)</span>
+        <span class="cat-badge cat-badge-palm">Palm</span>
       </a>
-      <a class="plant-card" href="plants/croton.html">
+      <a class="plant-card" href="plants/croton.html" data-category="Tropical Foliage" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Croton</span>
         <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/african-violet.html">
+      <a class="plant-card" href="plants/african-violet.html" data-category="Flowering" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">African Violet</span>
         <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-flowering">Flowering</span>
       </a>
-      <a class="plant-card" href="plants/christmas-cactus.html">
+      <a class="plant-card" href="plants/christmas-cactus.html" data-category="Flowering" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Christmas Cactus</span>
         <span class="plant-card-freq">Every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-flowering">Flowering</span>
       </a>
-      <a class="plant-card" href="plants/money-tree.html">
+      <a class="plant-card" href="plants/money-tree.html" data-category="Tropical Foliage" data-pet-safe="true">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Money Tree</span>
         <span class="plant-card-freq">Every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
-      <a class="plant-card" href="plants/bird-of-paradise.html">
+      <a class="plant-card" href="plants/bird-of-paradise.html" data-category="Tropical Foliage" data-pet-safe="false">
         <span class="plant-card-icon">🌿</span>
         <span class="plant-card-name">Bird of Paradise</span>
         <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/ponytail-palm.html" data-category="Succulent & Cactus" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Ponytail Palm</span>
+        <span class="plant-card-freq">Every 14-21 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
+      </a>
+      <a class="plant-card" href="plants/areca-palm.html" data-category="Palm" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Areca Palm</span>
+        <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-palm">Palm</span>
+      </a>
+      <a class="plant-card" href="plants/prayer-plant.html" data-category="Tropical Foliage" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Prayer Plant</span>
+        <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/monstera-adansonii.html" data-category="Vine & Trailing" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Monstera Adansonii</span>
+        <span class="plant-card-freq">Every 6-9 days (summer)</span>
+        <span class="cat-badge cat-badge-vine-trailing">Vine & Trailing</span>
+      </a>
+      <a class="plant-card" href="plants/hoya.html" data-category="Vine & Trailing" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Hoya</span>
+        <span class="plant-card-freq">Every 10-14 days (summer)</span>
+        <span class="cat-badge cat-badge-vine-trailing">Vine & Trailing</span>
+      </a>
+      <a class="plant-card" href="plants/bromeliad-guzmania.html" data-category="Flowering" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Bromeliad</span>
+        <span class="plant-card-freq">Every 7-9 days (plus keep the central cup topped up) (summer)</span>
+        <span class="cat-badge cat-badge-flowering">Flowering</span>
+      </a>
+      <a class="plant-card" href="plants/string-of-hearts.html" data-category="Vine & Trailing" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">String of Hearts</span>
+        <span class="plant-card-freq">Every 10-14 days (summer)</span>
+        <span class="cat-badge cat-badge-vine-trailing">Vine & Trailing</span>
+      </a>
+      <a class="plant-card" href="plants/burros-tail.html" data-category="Succulent & Cactus" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Burro's Tail</span>
+        <span class="plant-card-freq">Every 12-16 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
+      </a>
+      <a class="plant-card" href="plants/haworthia.html" data-category="Succulent & Cactus" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Haworthia</span>
+        <span class="plant-card-freq">Every 14-18 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
+      </a>
+      <a class="plant-card" href="plants/echeveria.html" data-category="Succulent & Cactus" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Echeveria</span>
+        <span class="plant-card-freq">Every 12-16 days (summer)</span>
+        <span class="cat-badge cat-badge-succulent-cactus">Succulent & Cactus</span>
+      </a>
+      <a class="plant-card" href="plants/weeping-fig.html" data-category="Tropical Foliage" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Weeping Fig</span>
+        <span class="plant-card-freq">Every 7-9 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/norfolk-island-pine.html" data-category="Tropical Foliage" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Norfolk Island Pine</span>
+        <span class="plant-card-freq">Every 6-8 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/peperomia.html" data-category="Tropical Foliage" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Peperomia</span>
+        <span class="plant-card-freq">Every 9-12 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/anthurium.html" data-category="Flowering" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Anthurium</span>
+        <span class="plant-card-freq">Every 6-8 days (summer)</span>
+        <span class="cat-badge cat-badge-flowering">Flowering</span>
+      </a>
+      <a class="plant-card" href="plants/alocasia.html" data-category="Tropical Foliage" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Alocasia (African Mask Plant)</span>
+        <span class="plant-card-freq">Every 5-7 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/kentia-palm.html" data-category="Palm" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Kentia Palm</span>
+        <span class="plant-card-freq">Every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-palm">Palm</span>
+      </a>
+      <a class="plant-card" href="plants/cast-iron-plant.html" data-category="Tropical Foliage" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Cast Iron Plant</span>
+        <span class="plant-card-freq">Every 10-14 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/air-plant.html" data-category="Air Plant" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Air Plant</span>
+        <span class="plant-card-freq">Mist or soak 2-3 times per week (summer)</span>
+        <span class="cat-badge cat-badge-air-plant">Air Plant</span>
+      </a>
+      <a class="plant-card" href="plants/begonia.html" data-category="Flowering" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Begonia</span>
+        <span class="plant-card-freq">Every 6-8 days (summer)</span>
+        <span class="cat-badge cat-badge-flowering">Flowering</span>
+      </a>
+      <a class="plant-card" href="plants/coleus.html" data-category="Tropical Foliage" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Coleus</span>
+        <span class="plant-card-freq">Every 4-6 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/schefflera.html" data-category="Tropical Foliage" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Schefflera (Umbrella Plant)</span>
+        <span class="plant-card-freq">Every 8-11 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/dieffenbachia.html" data-category="Tropical Foliage" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Dieffenbachia (Dumb Cane)</span>
+        <span class="plant-card-freq">Every 7-9 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/fittonia.html" data-category="Tropical Foliage" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Fittonia (Nerve Plant)</span>
+        <span class="plant-card-freq">Every 3-5 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
+      </a>
+      <a class="plant-card" href="plants/bamboo-palm.html" data-category="Palm" data-pet-safe="true">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Bamboo Palm</span>
+        <span class="plant-card-freq">Every 7-9 days (summer)</span>
+        <span class="cat-badge cat-badge-palm">Palm</span>
+      </a>
+      <a class="plant-card" href="plants/lucky-bamboo.html" data-category="Tropical Foliage" data-pet-safe="false">
+        <span class="plant-card-icon">🌿</span>
+        <span class="plant-card-name">Lucky Bamboo</span>
+        <span class="plant-card-freq">Change water every 7-10 days (summer)</span>
+        <span class="cat-badge cat-badge-tropical-foliage">Tropical Foliage</span>
       </a>
       
       </div>
+      <p class="muted small" id="no-results" hidden>No plants match those filters — try clearing one.</p>
     </section>
   </div>
   </main>
